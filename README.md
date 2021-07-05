@@ -61,11 +61,9 @@ hemisphere_image_urls = [
 ]
 ```
 
-- - -
-
 ## Step 2 - MongoDB and Flask Application
 
-Used MongoDB with Flask templating to create a new HTML page that displayed all of the information that was scraped from the URLs above.
+Used MongoDB with Flask templating to create a new HTML page that displayed all of the information scraped from the URLs above.
 
 * Started by converting your Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that executed all of my scraping code from above and returned one Python dictionary containing all of the scraped data.
 
@@ -73,7 +71,7 @@ Used MongoDB with Flask templating to create a new HTML page that displayed all 
 
   * Stored the return value in Mongo as a Python dictionary.
 
-* Created a root route `/` that queried my Mongo database and passed the mars data into an HTML template to display the data.
+* Next, I created a `/scrape` route that imported my `scrape_mars.py` script and called my `scrape` function.![Uploading image.png…]()
 
 * Created a template HTML file called `index.html` that took the mars data dictionary and displayed all of the data in the appropriate HTML elements. 
 
